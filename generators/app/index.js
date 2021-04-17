@@ -16,9 +16,7 @@ module.exports = class extends Generator {
     }
 
     writing() {
-
         // 把每个文件都通过模板转成目标路径
-
         const templates = [
             '.editorconfig',
             '.gitignore',
@@ -33,7 +31,6 @@ module.exports = class extends Generator {
             'src/pages/index.tsx',
             'src/pages/index.less',
         ]
-
         templates.forEach(item => {
             this.fs.copyTpl(
                 this.templatePath(item),
